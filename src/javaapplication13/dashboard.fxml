@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="690.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication13.DashboardController">
+   <children>
+      <BorderPane fx:id="contentArea" layoutY="-4.0" prefHeight="699.0" prefWidth="1148.0">
+         <top>
+            <Pane prefHeight="110.0" prefWidth="1082.0" style="-fx-background-color: #246EE9;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="dashboard_label" layoutX="44.0" layoutY="22.0" prefHeight="49.0" prefWidth="168.0" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="31.0" />
+                     </font></Label>
+                  <Label layoutX="44.0" layoutY="71.0" prefHeight="29.0" prefWidth="108.0" text="Welcom Dr:" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userDoctor" layoutX="158.0" layoutY="71.0" prefHeight="29.0" prefWidth="108.0" text="hhh" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <VBox prefHeight="612.0" prefWidth="237.0" style="-fx-background-color: #34495e; -fx-alignment: center;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="dashboard" onAction="#dashboardClick" prefHeight="57.0" prefWidth="202.0" text="Dashboard" textFill="#f2eded">
+                     <font>
+                        <Font name="Calibri Bold" size="23.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="settings" onAction="#SettingsClicks" prefHeight="57.0" prefWidth="202.0" text="Settings" textFill="#f2eded">
+                     <font>
+                        <Font name="Calibri Bold" size="23.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="options" onAction="#optionClick" prefHeight="57.0" prefWidth="202.0" text="Options" textFill="#f2eded">
+                     <font>
+                        <Font name="Calibri Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="about" onAction="#about" prefHeight="57.0" prefWidth="202.0" text="About" textFill="#f2eded">
+                     <font>
+                        <Font name="Calibri Bold" size="23.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <Pane fx:id="pane" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

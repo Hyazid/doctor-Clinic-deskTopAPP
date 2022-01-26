@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="747.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication13.EditRDVController">
+   <children>
+      <Pane prefHeight="93.0" prefWidth="747.0" style="-fx-background-color: #e67e22;">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="306.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit RDV" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri Bold" size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="276.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="put your information about RDV" wrappingWidth="194.84765625">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Label layoutX="13.0" layoutY="141.0" text="ID RDV:">
+         <font>
+            <Font name="Calibri Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="IDRDV" layoutX="83.0" layoutY="134.0" prefHeight="37.0" prefWidth="118.0" />
+      <Label layoutX="209.0" layoutY="141.0" text="patient name:">
+         <font>
+            <Font name="Calibri Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchRDVName" layoutX="327.0" layoutY="134.0" prefHeight="37.0" prefWidth="125.0" />
+      <Label layoutX="456.0" layoutY="142.0" text="patient lastname:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchRDVLastName" layoutX="574.0" layoutY="135.0" prefHeight="37.0" prefWidth="153.0" />
+      <Line endX="226.0" layoutX="369.0" layoutY="125.0" startX="-225.0" />
+      <Line endX="226.0" layoutX="374.0" layoutY="219.0" startX="-225.0" />
+      <Label layoutX="14.0" layoutY="235.0" text="patient name:">
+         <font>
+            <Font name="Calibri Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="patientNameToEDitField" layoutX="132.0" layoutY="228.0" prefHeight="37.0" prefWidth="125.0" />
+      <Label layoutX="288.0" layoutY="235.0" text="patient lastname:">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="patientLastNameFieldEdit" layoutX="406.0" layoutY="228.0" prefHeight="37.0" prefWidth="153.0" />
+      <Label layoutX="14.0" layoutY="297.0" text="RDV motif">
+         <font>
+            <Font name="Calibri Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="585.0" layoutY="235.0" text="age">
+         <font>
+            <Font name="Calibri Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="agePatientField" layoutX="615.0" layoutY="228.0" prefHeight="37.0" prefWidth="118.0" />
+      <JFXTextArea fx:id="motifRDVToEditField" layoutX="90.0" layoutY="297.0" prefHeight="185.0" prefWidth="208.0" style="-fx-border-width: 2;" />
+      <Label layoutX="333.0" layoutY="295.0" text="Date rdv:">
+         <font>
+            <Font name="Calibri Bold" size="19.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateRDvToEdit" layoutX="418.0" layoutY="287.0" prefHeight="37.0" prefWidth="208.0" />
+      <JFXDialog />
+      <JFXButton buttonType="RAISED" cancelButton="true" defaultButton="true" layoutX="579.0" layoutY="353.0" onAction="#saveEditRDV" prefHeight="48.0" prefWidth="147.0" ripplerFill="#977d7d" style="-fx-background-color: #3498db;" text="save" textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" cancelButton="true" defaultButton="true" layoutX="578.0" layoutY="423.0" onAction="#cancelEditRDV" prefHeight="48.0" prefWidth="147.0" ripplerFill="#977d7d" style="-fx-background-color: #e74c3c;" text="CANCEL" textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Bell MT Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" cancelButton="true" defaultButton="true" layoutX="296.0" layoutY="182.0" onAction="#searchRDV" prefHeight="37.0" prefWidth="147.0" ripplerFill="#977d7d" style="-fx-background-color: #2ecc71;" text="Search.." textAlignment="CENTER" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

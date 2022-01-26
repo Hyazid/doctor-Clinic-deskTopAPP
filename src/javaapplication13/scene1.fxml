@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="910.0" style="-fx-background-color: #CAD3C8;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication13.Scene1Controller">
+   <children>
+      <TabPane layoutY="1.0" prefHeight="590.0" prefWidth="910.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="General">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="7.0" layoutY="14.0" prefHeight="442.0" prefWidth="899.0">
+                          <columns>
+                            <TableColumn prefWidth="60.0" text="id patient" />
+                            <TableColumn prefWidth="110.0" text="nom patient" />
+                              <TableColumn prefWidth="96.0" text="prenom patient" />
+                              <TableColumn prefWidth="75.0" text="age patient" />
+                              <TableColumn prefWidth="107.0" text="groupe sanguin" />
+                              <TableColumn prefWidth="111.0" text="dernière consult" />
+                              <TableColumn prefWidth="339.0" text="diagnostique" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="26.0" layoutY="471.0" text="Nombre de patients:">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="187.0" layoutY="471.0" text="00">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="511.0" text="Nombre de diagnostiques:">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="228.0" layoutY="511.0" text="00">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="300.0" layoutY="471.0" text="Nombre de consultations:">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="498.0" layoutY="471.0" text="00">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="300.0" layoutY="511.0" text="Nombre de rendez-vous:">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="489.0" layoutY="511.0" text="00">
+                           <font>
+                              <Font name="Arial Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="rendez-vous">
+            <content>
+              <AnchorPane fx:id="generalPaneRDV" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="438.0" prefWidth="751.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="id patient" />
+                            <TableColumn prefWidth="75.0" text="id RDV" />
+                              <TableColumn prefWidth="95.0" text="nom patient" />
+                              <TableColumn prefWidth="103.0" text="prenom patient" />
+                              <TableColumn prefWidth="100.0" text="age patient" />
+                              <TableColumn prefWidth="314.0" text="motife RDV" />
+                          </columns>
+                        </TableView>
+                        <VBox alignment="CENTER" layoutX="774.0" layoutY="14.0" prefHeight="437.0" prefWidth="122.0" spacing="26.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#addRDV" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #26de81;" text="Ajouter RDV" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#editRDV" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #fed330;" text="Modifier RDV" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#deletRDV" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #fd9644;" text="Supprimer RDV" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#printRDV" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #778ca3;" text="Imprimer" textFill="#fffefe">
+                                 <font>
+                                    <Font name="Arial" size="19.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="consultation">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="14.0" layoutY="8.0" prefHeight="71.0" prefWidth="876.0" spacing="50.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" prefHeight="64.0" prefWidth="110.0" ripplerFill="BLACK" style="-fx-background-color: #26de81;" text="Consultation" textFill="#f8f6f6">
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#addConsultation" prefHeight="64.0" prefWidth="110.0" ripplerFill="BLACK" style="-fx-background-color: #3867d6;" text="ajouter consultation" textAlignment="CENTER" textFill="#f8f6f6" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" onAction="#soncultModification" prefHeight="64.0" prefWidth="110.0" ripplerFill="BLACK" style="-fx-background-color: #fa8231;" text="modifier consultation" textAlignment="CENTER" textFill="#f8f6f6" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" prefHeight="64.0" prefWidth="110.0" ripplerFill="BLACK" style="-fx-background-color: #eb3b5a;" text="supprimer consultation" textAlignment="CENTER" textFill="#f8f6f6" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" prefHeight="64.0" prefWidth="110.0" ripplerFill="BLACK" style="-fx-background-color: #4b6584;" text="Imprimer" textAlignment="CENTER" textFill="#f8f6f6" wrapText="true">
+                                 <font>
+                                    <Font name="Calibri Bold" size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Line endX="341.0" layoutX="435.0" layoutY="97.0" scaleY="1.2" startX="-290.0" stroke="#9a9898" strokeWidth="2.0" />
+                        <Pane fx:id="paneForForm" layoutX="14.0" layoutY="98.0" prefHeight="456.0" prefWidth="887.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="resumé">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

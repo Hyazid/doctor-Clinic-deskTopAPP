@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="887.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication13.EditConsultController">
+   <children>
+      <Text layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICATION" underline="true">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the name and last name of patient to change  diagnostc or consult" />
+      <Label layoutX="14.0" layoutY="103.0" text="Name patient :">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameFieldToSearch" layoutX="116.0" layoutY="93.0" prefHeight="37.0" prefWidth="192.0" />
+      <Label layoutX="342.0" layoutY="103.0" text="Last name patient :">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lastNameFieldToSearch" layoutX="460.0" layoutY="93.0" prefHeight="37.0" prefWidth="192.0" />
+      <JFXButton buttonType="RAISED" layoutX="715.0" layoutY="85.0" onAction="#editForm" prefHeight="43.0" prefWidth="125.0" ripplerFill="#ee1616" style="-fx-background-color: #e67e22;" text="Edit" textFill="#fffdfd">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </JFXButton>
+      <Line endX="450.0" layoutX="415.0" layoutY="147.0" startX="-382.0" />
+      <Pane fx:id="modificationPane" layoutX="14.0" layoutY="148.0" prefHeight="308.0" prefWidth="867.0" />
+   </children>
+</Pane>
